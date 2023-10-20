@@ -7,7 +7,7 @@
     <h4 class="p-3 mb-2 border" style="background-color:white; color:black;">Всего заявок в работе: <span class="text-info">{{ counter }}</span></h4>
     <h5 class="p-3 mb-2 border text-center">Выполненные заявки</h5>
     {% for elem in done %}
-        <div class="row p-3  border-bottom border-top" style="background-color:grey;">
+        <div class="row p-3  border-bottom border-top">
             <img class="col-4" src="{{ elem.photo.url }}" alt="Фото заявки">
             <p class="p-3 mb-2"><b>Наименование:</b> {{ elem.name }} <br> <b>Категория:</b> {{ elem.Category }} <br> <b>Дата
                 добавления:</b> {{ elem.date }}</p>

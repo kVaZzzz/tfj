@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a href="{% url 'index' %}" class="navbar-brand" style = "color:white;">DesignPro</a>
+    <a href="{% url 'index' %}" class="navbar-brand" style = "color:black;">DesignPro</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,30 +23,30 @@
         {% block sidebar %}
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="{% url 'index' %}" class="nav-link" style ="background-color:white; margin-left:10px; border-radius:8px; color:black;">Главная</a>
+                    <a href="{% url 'index' %}" class="nav-link" style = "color:black">Главная</a>
                 </li>
                 {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <a href="{% url 'createapl' %}" class="nav-link " style ="background-color:white; margin-left:10px; border-radius:8px; color:black;">Создать заявку</a>
+                        <a href="{% url 'createapl' %}" class="nav-link " style = "color:black">Создать заявку</a>
                     </li>
                 {% endif %}
             </ul>
             {% if request.user.is_authenticated %}
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="{% url 'profile' %}" class="nav-link" style ="background-color:white; margin-left:10px; border-radius:8px; color:black;">Профиль ({{ user.username }})</a>
+                        <a href="{% url 'profile' %}" class="nav-link"style = "color:black">Профиль ({{ user.username }})</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'logout' %}" class="nav-link" style ="background-color:white; margin-left:10px; border-radius:8px; color:black;">Выйти</a>
+                        <a href="{% url 'logout' %}" class="nav-link"style = "color:black">Выйти</a>
                     </li>
                 </ul>
             {% else %}
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register' %}" style ="background-color:white; margin-left:10px; border-radius:8px; color:black;">Регистрация</a>
+                        <a class="nav-link" href="{% url 'register' %}"style = "color:black">Регистрация</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}" style ="background-color:white; margin-left:10px; border-radius:8px; color:black;">Авторизоваться</a>
+                        <a class="nav-link" href="{% url 'login' %}" style = "color:black">Авторизоваться</a>
                     </li>
                 </ul>
             {% endif %}
